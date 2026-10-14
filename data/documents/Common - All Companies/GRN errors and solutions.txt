@@ -1,0 +1,22 @@
+GRN / Product receipt posting - common errors (IT helpdesk notes)
+Maintained by: Nikhil (IT helpdesk)   last update 02-Sep-2026
+------------------------------------------------------------------
+
+1) "Purchase order is not confirmed"
+   -> PO must be approved AND confirmed before we can receive. Ask buyer to confirm it. Store cannot do anything here.
+
+2) "Batch number is mandatory" / batch error
+   -> item is batch tracked. Open Registration on the line, enter batch no. then post.
+   Note: GRN post karne se pehle batch number zaroor daalo, warna stock wrong batch mein chala jayega.
+
+3) "Quantity exceeds over-delivery tolerance"
+   -> recieved qty is more than PO qty + allowed tolerance (normally 5%).
+   Receive only PO qty, extra qty send back or ask buyer to amend PO.
+
+4) "Financial dimension Cost centre is missing"
+   -> PO line has no cost centre. Buyer has to update financial dimensions on PO line. After that GRN will post.
+
+5) Receipt posted in wrong warehouse
+   -> do NOT cancel yourself. raise ticket, IT/stores team will do the correction with a transfer journal.
+
+For anything not in this list -> helpdesk ticket with PO no + screenshot.

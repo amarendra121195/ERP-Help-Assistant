@@ -1,0 +1,350 @@
+[
+  {
+    "id": 1,
+    "user_id": "U01",
+    "question": "How do I create a purchase order against a project WBS?",
+    "category": "documents",
+    "expected_answer": "Steps from the Project PO against WBS guide: project must be In process, note the WBS activity number, create PO, select Project ID in header, enter activity number and project category on each line, submit (budget check).",
+    "expected_route": "documents",
+    "must_contain": [
+      "activity",
+      "Project ID"
+    ],
+    "expected_sources": [
+      "Project PO against WBS - user guide v1.2.pdf"
+    ]
+  },
+  {
+    "id": 2,
+    "user_id": "U01",
+    "question": "What is the total value of open POs for Project Riverside?",
+    "category": "data",
+    "expected_answer": "INR 33,34,200 (6 open lines on Riverside Towers, RIL-PRJ-0007, without GST).",
+    "expected_route": "data",
+    "must_contain": [
+      "33,34,200"
+    ]
+  },
+  {
+    "id": 3,
+    "user_id": "U01",
+    "question": "What is the PO approval limit for a plant head?",
+    "category": "documents",
+    "expected_answer": "Up to INR 5,00,000 as per Riverside PO Approval Matrix v2.0 (not the old v1.0 limit of 3,00,000, not Greenleaf's 10,00,000).",
+    "expected_route": "documents",
+    "must_contain": [
+      "5,00,000"
+    ],
+    "must_not_contain": [
+      "3,00,000",
+      "10,00,000"
+    ],
+    "expected_sources": [
+      "Riverside - PO Approval Matrix v2.0.docx"
+    ]
+  },
+  {
+    "id": 4,
+    "user_id": "U02",
+    "question": "What is the PO approval limit for a plant head?",
+    "category": "documents",
+    "expected_answer": "Up to INR 10,00,000 as per Greenleaf Purchase Policy 2026 (Coastal Retail has no PO approval limit for a plant head).",
+    "expected_route": "documents",
+    "must_contain": [
+      "10,00,000"
+    ],
+    "must_not_contain": [
+      "Riverside"
+    ],
+    "expected_sources": [
+      "Greenleaf Purchase Policy 2026.pdf"
+    ]
+  },
+  {
+    "id": 5,
+    "user_id": "U02",
+    "question": "Show open POs for Project Riverside.",
+    "category": "access",
+    "expected_answer": "Polite refusal: U02 does not have access to C01 Riverside Infra.",
+    "expected_route": "refused",
+    "must_contain": [],
+    "must_not_contain": [
+      "33,34,200",
+      "RIL/PO"
+    ],
+    "must_contain_any": [
+      "not have access",
+      "don't have access",
+      "no access",
+      "not allowed",
+      "not authorized",
+      "not authorised"
+    ]
+  },
+  {
+    "id": 6,
+    "user_id": "U03",
+    "question": "Which vendor has the highest PO value across all companies?",
+    "category": "data",
+    "expected_answer": "Gujarat Steel Rolling (V-00145) with INR 42,34,000 (canceled lines excluded; vendor spelled 3 ways, grouped by vendor account).",
+    "expected_route": "data",
+    "must_contain": [
+      "Gujarat Steel",
+      "42,34,000"
+    ]
+  },
+  {
+    "id": 7,
+    "user_id": "U03",
+    "question": "What is our travel reimbursement policy?",
+    "category": "not_available",
+    "expected_answer": "Not available in the documents.",
+    "expected_route": "documents",
+    "must_contain": [
+      "not available"
+    ],
+    "expect_no_sources": true
+  },
+  {
+    "id": 8,
+    "user_id": "U01",
+    "question": "I get the error 'Batch number is mandatory' when posting a GRN. What should I do?",
+    "category": "documents",
+    "expected_answer": "Item is batch tracked: open Registration on the line, enter the batch number, then post.",
+    "expected_route": "documents",
+    "must_contain": [
+      "Registration"
+    ],
+    "expected_sources": [
+      "GRN errors and solutions.txt"
+    ]
+  },
+  {
+    "id": 9,
+    "user_id": "U02",
+    "question": "Which documents does a new vendor need to submit for onboarding?",
+    "category": "documents",
+    "expected_answer": "PAN card copy, GST registration certificate (if registered), cancelled cheque or bank letter, MSME/Udyam certificate (if applicable).",
+    "expected_route": "documents",
+    "must_contain": [
+      "PAN",
+      "GST",
+      "cheque"
+    ],
+    "expected_sources": [
+      "Vendor Onboarding SOP.docx"
+    ]
+  },
+  {
+    "id": 10,
+    "user_id": "U03",
+    "question": "When does reverse charge (RCM) apply on our purchases?",
+    "category": "documents",
+    "expected_answer": "Legal services from an advocate/law firm, Goods Transport Agency services (if GTA has not opted for forward charge), security services from a non-corporate supplier.",
+    "expected_route": "documents",
+    "must_contain": [
+      "security"
+    ],
+    "expected_sources": [
+      "FW RCM applicability on purchases.txt"
+    ],
+    "must_contain_any": [
+      "transport",
+      "GTA"
+    ]
+  },
+  {
+    "id": 11,
+    "user_id": "U02",
+    "question": "How many open PO lines does Coastal Retail have and what is their total value?",
+    "category": "data",
+    "expected_answer": "4 open lines, INR 3,93,900.",
+    "expected_route": "data",
+    "must_contain": [
+      "3,93,900"
+    ]
+  },
+  {
+    "id": 12,
+    "user_id": "U02",
+    "question": "What is the total PO value with PackWell Industries?",
+    "category": "data",
+    "expected_answer": "INR 9,16,500 (6 lines across C02 and C03, canceled line excluded; 'PackWell' and 'Packwell' are the same vendor V-00322).",
+    "expected_route": "data",
+    "must_contain": [
+      "9,16,500"
+    ]
+  },
+  {
+    "id": 13,
+    "user_id": "U03",
+    "question": "Give me the total PO value for each company.",
+    "category": "data",
+    "expected_answer": "C01 INR 61,18,270; C02 INR 24,85,660; C03 INR 19,65,600 (canceled excluded).",
+    "expected_route": "data",
+    "must_contain": [
+      "61,18,270",
+      "24,85,660",
+      "19,65,600"
+    ]
+  },
+  {
+    "id": 14,
+    "user_id": "U01",
+    "question": "What is the total value of open POs for the Plant 2 Upgrade project?",
+    "category": "access",
+    "expected_answer": "Refusal: Plant 2 Upgrade belongs to a company U01 cannot see (C02). The question does not name the company, so the data tool must catch it.",
+    "expected_route": "data",
+    "must_contain": [],
+    "must_not_contain": [
+      "4,79,640"
+    ],
+    "must_contain_any": [
+      "not have access",
+      "don't have access",
+      "no access",
+      "not allowed",
+      "not authorized",
+      "not authorised"
+    ]
+  },
+  {
+    "id": 15,
+    "user_id": "U03",
+    "question": "Up to what amount can a site engineer at Riverside make an emergency purchase?",
+    "category": "documents",
+    "expected_answer": "Up to INR 25,000, with approval to be taken within 3 working days (Riverside PO Approval Matrix v2.0).",
+    "expected_route": "documents",
+    "must_contain": [
+      "25,000"
+    ],
+    "expected_sources": [
+      "Riverside - PO Approval Matrix v2.0.docx"
+    ]
+  },
+  {
+    "id": 16,
+    "user_id": "U02",
+    "question": "Up to what amount can a store manager approve purchase requisitions?",
+    "category": "documents",
+    "expected_answer": "Up to INR 30,000; above that the Area Manager approves (Coastal Retail store guidelines).",
+    "expected_route": "documents",
+    "must_contain": [
+      "30,000"
+    ],
+    "expected_sources": [
+      "Store stock & reorder guidelines.docx"
+    ]
+  },
+  {
+    "id": 17,
+    "user_id": "U01",
+    "question": "What are the payment terms for MSME vendors at Greenleaf?",
+    "category": "access",
+    "expected_answer": "Polite refusal: U01 does not have access to C02 Greenleaf Pharma.",
+    "expected_route": "refused",
+    "must_contain": [],
+    "must_not_contain": [
+      "45 days"
+    ],
+    "must_contain_any": [
+      "not have access",
+      "don't have access",
+      "no access",
+      "not allowed",
+      "not authorized",
+      "not authorised"
+    ]
+  },
+  {
+    "id": 18,
+    "user_id": "U03",
+    "question": "How many PO lines were cancelled and what was their total value?",
+    "category": "data",
+    "expected_answer": "3 canceled lines, INR 5,26,800.",
+    "expected_route": "data",
+    "must_contain": [
+      "5,26,800"
+    ]
+  },
+  {
+    "id": 19,
+    "user_id": "U01",
+    "question": "What is the over-delivery tolerance when receiving material against a PO?",
+    "category": "documents",
+    "expected_answer": "Normally 5%; receive only the PO quantity and send back the extra or ask the buyer to amend the PO.",
+    "expected_route": "documents",
+    "must_contain": [
+      "5%"
+    ],
+    "expected_sources": [
+      "GRN errors and solutions.txt"
+    ]
+  },
+  {
+    "id": 20,
+    "user_id": "U03",
+    "question": "Who is the CEO of Riverside Infra Ltd?",
+    "category": "not_available",
+    "expected_answer": "Not available in the documents or data.",
+    "expected_route": null,
+    "must_contain": [
+      "not available"
+    ]
+  },
+  {
+    "id": 21,
+    "user_id": "U01",
+    "question": "What is the approved budget for Project Riverside?",
+    "category": "not_available",
+    "expected_answer": "Not available: the PO register has PO values, not project budgets.",
+    "expected_route": null,
+    "must_contain": [
+      "not available"
+    ]
+  },
+  {
+    "id": 22,
+    "user_id": "U03",
+    "question": "What was the total PO value in August 2026?",
+    "category": "data",
+    "expected_answer": "INR 28,80,160 (8 lines dated 1-31 Aug 2026, canceled excluded).",
+    "expected_route": "data",
+    "must_contain": [
+      "28,80,160"
+    ]
+  },
+  {
+    "id": 23,
+    "user_id": "U01",
+    "question": "Can I edit a purchase order after it has been confirmed?",
+    "category": "documents",
+    "expected_answer": "Not directly; use Request change from the action pane (D365 PO creation steps).",
+    "expected_route": "documents",
+    "must_contain": [
+      "Request change"
+    ],
+    "expected_sources": [
+      "D365 PO creation steps.docx"
+    ]
+  },
+  {
+    "id": 24,
+    "user_id": "U03",
+    "question": "What is the PO approval limit for a plant head?",
+    "category": "documents",
+    "expected_answer": "Different per company: Riverside up to INR 5,00,000; Greenleaf up to INR 10,00,000. Coastal has no such limit in the documents.",
+    "expected_route": "documents",
+    "must_contain": [
+      "5,00,000",
+      "10,00,000"
+    ],
+    "must_not_contain": [
+      "3,00,000"
+    ],
+    "expected_sources": [
+      "Riverside - PO Approval Matrix v2.0.docx",
+      "Greenleaf Purchase Policy 2026.pdf"
+    ]
+  }
+]

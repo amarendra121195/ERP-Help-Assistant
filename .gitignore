@@ -1,0 +1,9 @@
+# Secrets
+.env
+
+# Generated
+vectorstore/
+logs/
+__pycache__/
+*.pyc
+.pytest_cache/

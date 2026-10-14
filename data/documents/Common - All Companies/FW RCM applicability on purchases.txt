@@ -1,0 +1,29 @@
+From: Tax Team
+Sent: 12 August 2026 11:42
+To: All Buyers; Accounts Payable
+Subject: FW: RCM applicability on purchases - please read
+
+Dear all,
+
+Many queries are coming on reverse charge (RCM), so sharing a quick summary again. Please keep this mail for reference.
+
+Under RCM the BUYER (we) pays GST to the government, not the vendor. The vendor invoice will not charge GST in these cases.
+
+Common RCM cases for our group companies:
+ - Legal services from an advocate or law firm
+ - Goods Transport Agency (GTA) services, where the GTA has not opted to pay tax under forward charge
+ - Security services from a non-corporate supplier (individual / partnership firm) to a registered company
+
+In D365 please select the item sales tax group marked "RCM" on such PO lines / invoices. The system will then post both the GST liability and the input credit. Do not use the normal GST group for these.
+
+If you are not sure whether RCM applies, please write to the tax team BEFORE posting the invoice. Correction after GST return filing is difficult.
+
+Regards,
+Tax Team
+
+-----Original Message-----
+From: Tax Team
+Sent: 03 April 2026 09:15
+Subject: RCM applicability on purchases
+
+(original mail - same content as above)

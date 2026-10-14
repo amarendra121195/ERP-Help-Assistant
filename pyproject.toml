@@ -1,0 +1,10 @@
+[project]
+name = "erp-help-assistant"
+version = "1.0.0"
+description = "ERP Help Assistant: D365 how-to answers from documents (RAG) and exact PO figures from SQL Server."
+requires-python = ">=3.12"
+# Dependencies are listed in requirements.txt (pip install -r requirements.txt).
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests/unit"]

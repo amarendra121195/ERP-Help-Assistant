@@ -1,0 +1,20 @@
+ERP Help Assistant - assignment data pack
+=========================================
+
+All companies, people, vendors and figures in this pack are fictional.
+
+Companies
+  C01  Riverside Infra Ltd
+  C02  Greenleaf Pharma Ltd
+  C03  Coastal Retail Ltd
+
+Documents\
+  Files are kept company-wise, the same way they sit on our shared drive.
+  "Common - All Companies" folder applies to every company.
+  Mixed formats (Word, PDF, text notes, a forwarded mail).
+
+PO Register\
+  Export of PO lines from D365, Apr to Sep 2026. Amounts are without GST.
+
+User access list.xlsx
+  Which companies each test user is allowed to see.
