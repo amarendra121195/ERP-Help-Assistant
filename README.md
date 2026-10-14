@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ERP Help Assistant
 
 A small assistant for a group that runs Microsoft Dynamics 365 Finance & Operations for three companies.
@@ -363,3 +364,6 @@ The data is not perfectly clean. What I found and what I assumed:
 19. The cost per request is approximate: chat tokens from the API response multiplied by the list price, plus
     search-query embedding tokens counted with tiktoken. The cached-input discount is ignored, so the real cost
     is the same or lower.
+=======
+# ERP-Help-Assistant
+>>>>>>> f8634e9f8381102320d1ac7588043bf13ced22f5
